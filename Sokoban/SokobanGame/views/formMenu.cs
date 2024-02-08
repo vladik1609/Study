@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Collections;
-using System.Xml.Linq;
-using System.Xml;
+using Sokoban.Properties;
 using System.IO;
-using System.Security.Cryptography;
 
 namespace Sokoban
 {
@@ -14,19 +11,6 @@ namespace Sokoban
         public formMenu()
         {
             InitializeComponent();
-            try
-            {
-                String[] args = Environment.GetCommandLineArgs();
-                if (args[1] == "-adminmode")
-                {
-                    this.Text = "adminmode - activated";
-                    button1.Visible = true;
-                    button2.Visible = true;
-                }
-            }
-            catch (Exception)
-            {
-            }
         }
 
         #region labelColor
@@ -175,99 +159,25 @@ namespace Sokoban
 
         private void label5_Click(object sender, EventArgs e)
         {
-            formRules formRules = new formRules();
-            if (File.Exists(@"Rules.rul"))
-             {
-                 try
-                 {
-                     XmlDocument doc = new XmlDocument();
-                     CspParameters cspParams = new CspParameters();
-                     cspParams.KeyContainerName = "XML_ENC_RSA_KEY";
-                     RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
 
-                     doc.Load(@"Rules.rul");
-                     CryptographyXml.DecryptXml(doc, rsaKey, "Sokoban");
-                     doc.Save(@"Rules.rul");
+            try
+            {
+                formRules formRules = new formRules();
+                formRules.label1.Text = Resources.Rules;
 
-                     XDocument xdoc = XDocument.Load(@"Rules.rul");
-                     formRules.label1.Text = xdoc.Element("Sokoban").Element("Rules").Value;
-
-                     doc.Load(@"Rules.rul");
-                     CryptographyXml.EncryptXml(doc, "Sokoban", rsaKey, "Sokoban");
-                     doc.Save(@"Rules.rul");
-
-                     rsaKey.Clear();
-
-                     this.Hide();
-                     formRules.ShowDialog();
-                     this.Show();
-                 }
-                 catch (Exception ex)
-                 {
-                     MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                 }
-             }
-             else
-             {
-                 MessageBox.Show("Файл правил отсутствует!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-             }
+                this.Hide();
+                formRules.ShowDialog();
+                this.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-          /*  try
-            {
-                OpenFileDialog openLVL = new OpenFileDialog();
-
-                if (DialogResult.OK == openLVL.ShowDialog())
-                {
-                    XmlDocument xmlDoc = new XmlDocument();
-                    CspParameters cspParams = new CspParameters();
-                    cspParams.KeyContainerName = "XML_ENC_RSA_KEY";
-                    RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
-
-                    xmlDoc.Load(openLVL.FileName);
-                    Saves.DecryptXML(xmlDoc, rsaKey, "Sokoban");
-                    xmlDoc.Save(openLVL.FileName);
-
-                    rsaKey.Clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-         /*   try
-            {
-                OpenFileDialog openLVL = new OpenFileDialog();
-
-                if (DialogResult.OK == openLVL.ShowDialog())
-                {
-                    XmlDocument xmlDoc = new XmlDocument();
-                    CspParameters cspParams = new CspParameters();
-                    cspParams.KeyContainerName = "XML_ENC_RSA_KEY";
-                    RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
-
-                    xmlDoc.Load(openLVL.FileName);
-                    Saves.EncryptXML(xmlDoc, "Sokoban", rsaKey, "Sokoban");
-                    xmlDoc.Save(openLVL.FileName);
-
-                    rsaKey.Clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
         }
     }
 }

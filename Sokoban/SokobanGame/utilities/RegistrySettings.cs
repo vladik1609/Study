@@ -26,18 +26,12 @@ namespace Sokoban
 
         private T GetRegistryKey<T>(string key, T defaultValue)
         {
-            try
+            string value = registryKey.GetValue(key)?.ToString();
+            if (value != null)
             {
-                string value = registryKey.GetValue(key)?.ToString();
-                if (value != null)
-                {
-                    return (T)Convert.ChangeType(value, typeof(T));
-                }
+                return (T)Convert.ChangeType(value, typeof(T));
             }
-            catch
-            {
-                // ДОБАВИТЬ ОБРАБОТКУ ошибок преобразования или раздел реестра не найден
-            }
+
             return defaultValue;
         }
 

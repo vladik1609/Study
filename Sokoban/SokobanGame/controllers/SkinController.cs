@@ -4,7 +4,7 @@ using Sokoban.Properties;
 
 namespace Sokoban
 {
-    internal class SkinController
+    internal class SkinController : ISkinController
     {
         private readonly Dictionary<int, SkinSet> skinSets;
 
@@ -51,7 +51,7 @@ namespace Sokoban
                 Space = space;
             }
 
-            public Image GetSkinImage(ItemType itemType)
+            internal Image GetSkinImage(ItemType itemType)
             {
                 switch (itemType)
                 {

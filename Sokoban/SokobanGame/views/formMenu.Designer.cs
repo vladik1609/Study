@@ -36,8 +36,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -139,30 +137,6 @@
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label3_MouseMove);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(269, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 40);
-            this.button1.TabIndex = 10;
-            this.button1.TabStop = false;
-            this.button1.Text = "Расшифровать XML";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(401, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 40);
-            this.button2.TabIndex = 11;
-            this.button2.TabStop = false;
-            this.button2.Text = "Зашифровать XML";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // formMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -170,8 +144,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(764, 596);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -200,8 +172,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
 

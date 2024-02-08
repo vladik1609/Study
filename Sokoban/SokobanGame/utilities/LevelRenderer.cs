@@ -5,9 +5,9 @@ namespace Sokoban
     internal class LevelRenderer
     {
         private readonly int blockSize;
-        private readonly SkinController skin;
+        private readonly ISkinController skin;
 
-        public LevelRenderer(SkinController skin, int blockSize)
+        public LevelRenderer(ISkinController skin, int blockSize)
         {
             this.skin = skin;
             this.blockSize = blockSize;

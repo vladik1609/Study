@@ -7,18 +7,18 @@ using System.IO;
 
 namespace Sokoban
 {
-    internal class SaveManager : ISaveManager
+    internal class SaveController : ISaveController
     {
         private readonly string pathDirectory;
         private readonly string pathFile;
 
-        public SaveManager(string directory, string fileName)
+        public SaveController(string directory, string fileName)
         {
             pathDirectory = directory;
             pathFile = Path.Combine(directory, fileName);
         }
 
-        public SaveManager(string pathFile)
+        public SaveController(string pathFile)
         {
             this.pathFile = pathFile;
         }

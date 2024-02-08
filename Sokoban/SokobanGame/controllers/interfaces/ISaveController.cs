@@ -1,6 +1,6 @@
 ﻿namespace Sokoban
 {
-    internal interface ISaveManager
+    internal interface ISaveController
     {
         void NewGame();
         void AddWinLevel(string levelNumber, string movesCount, string pushesCount);

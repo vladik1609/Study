@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Sokoban.GameController" BaseTypeListCollapsed="true">
+    <Position X="6" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAJAAAAAQABQAACAEAAAAhAAICAAgAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\GameController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.LevelController">
+    <Position X="3.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAACAAAAAAEAAEAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\LevelController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.SaveController" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAAQAAAAAAAAACAABIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\SaveController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.SkinController" BaseTypeListCollapsed="true">
+    <Position X="15" Y="1.25" Width="2.5" />
+    <NestedTypes>
+      <Class Name="Sokoban.SkinController.SkinSet" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SokobanGame\controllers\SkinController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\SkinController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.SoundController" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAgIAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\SoundController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.Level">
+    <Position X="2.5" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAAAAAAAAAAAAEAAAgAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\models\Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.LevelItem">
+    <Position X="0.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAIABAAACAQAAAgA=</HashCode>
+      <FileName>SokobanGame\models\LevelItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.LevelStatistics">
+    <Position X="4.75" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAgAABAAwAAAAAgAAAAAAAAAABAAAA=</HashCode>
+      <FileName>SokobanGame\models\LevelStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.SokobanGame" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABACwJQAQIAbIgCAAAAAEABAIJAIgCAhAEAA=</HashCode>
+      <FileName>SokobanGame\SokobanGame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.CryptographyXml">
+    <Position X="10.25" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\utilities\CryptographyXml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.LevelRenderer">
+    <Position X="15.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAJAAEAAAAAAA=</HashCode>
+      <FileName>SokobanGame\utilities\LevelRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.RegistrySettings">
+    <Position X="12.25" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAIAAAAEAABAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\utilities\RegistrySettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.formGame">
+    <Position X="12.5" Y="14.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAWAAAAiSAEAgagAGAABgLACBAAEBAgDACAgAgQAA=</HashCode>
+      <FileName>SokobanGame\views\FormGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.formMenu">
+    <Position X="9.75" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAAiAQAACAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>SokobanGame\views\FormMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.formRecords">
+    <Position X="18.25" Y="14.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\views\FormRecords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.formRules">
+    <Position X="20.75" Y="14.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\views\FormRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.formSettings">
+    <Position X="15.5" Y="14.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAACAAABAQAAiAAAACAAAAAAAAAAAAAAhEAAA=</HashCode>
+      <FileName>SokobanGame\views\FormSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.FilePathsConstants">
+    <Position X="0.5" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>SokobanGame\сonstants\FilePathsConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.RegistryConstants">
+    <Position X="3.25" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABgAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\сonstants\RegistryConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Sokoban.MoveRecord">
+    <Position X="5.5" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAFAAAAAAAAAAAAAAACAAABAQAA=</HashCode>
+      <FileName>SokobanGame\models\MoveRecord.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Sokoban.IGameController">
+    <Position X="6" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAJAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\interfaces\IGameController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sokoban.ISaveController">
+    <Position X="10.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAACAABIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\interfaces\ISaveController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sokoban.ISkinController">
+    <Position X="15.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\interfaces\ISkinController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sokoban.ISoundController">
+    <Position X="13" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\controllers\interfaces\ISoundController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sokoban.ISokobanGame">
+    <Position X="3.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAwJAAAAATIACAAAAAEABAAAAAACABAEAA=</HashCode>
+      <FileName>SokobanGame\ISokobanGame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sokoban.ISokobanRecords">
+    <Position X="6" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SokobanGame\ISokobanRecords.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ItemType">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAgAAAAAAAAAAAIBAAQAAAAACQAAAAA=</HashCode>
+      <FileName>SokobanGame\enums\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MoveDirection">
+    <Position X="12" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>SokobanGame\enums\MoveDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SoundType">
+    <Position X="13.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAABAAAAAAAAACAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>SokobanGame\enums\SoundType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

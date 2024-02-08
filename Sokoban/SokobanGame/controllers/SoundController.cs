@@ -2,7 +2,7 @@
 
 namespace Sokoban
 {
-    internal class SoundController
+    internal class SoundController : ISoundController
     {
         public bool Enabled { get; private set; }
         

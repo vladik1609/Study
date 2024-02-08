@@ -217,4 +217,9 @@
   <data name="move" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\sound\move.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Играет один игрок.
+Игрок перемещает ящики по лабиринту, представленному в виде плана, с целью расставить их на указанные конечные позиции. Игрок может толкать ящики, но не тянуть их, и только один ящик может быть передвинут за раз.
+Игрок последовательно переходит от одного уровня к другому, по мере выполнения.</value>
+  </data>
 </root>

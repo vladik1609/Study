@@ -19,7 +19,7 @@ namespace Sokoban.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -294,6 +294,17 @@ namespace Sokoban.Properties {
             get {
                 object obj = ResourceManager.GetObject("recordsBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Играет один игрок.
+        ///Игрок перемещает ящики по лабиринту, представленному в виде плана, с целью расставить их на указанные конечные позиции. Игрок может толкать ящики, но не тянуть их, и только один ящик может быть передвинут за раз.
+        ///Игрок последовательно переходит от одного уровня к другому, по мере выполнения..
+        /// </summary>
+        internal static string Rules {
+            get {
+                return ResourceManager.GetString("Rules", resourceCulture);
             }
         }
         

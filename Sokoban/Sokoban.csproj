@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SokobanGame\controllers\GameController.cs" />
+    <Compile Include="SokobanGame\controllers\interfaces\ISoundController.cs" />
+    <Compile Include="SokobanGame\controllers\interfaces\ISkinController.cs" />
     <Compile Include="SokobanGame\enums\SoundType.cs" />
     <Compile Include="SokobanGame\ISokobanGame.cs" />
     <Compile Include="SokobanGame\ISokobanRecords.cs" />
@@ -77,39 +79,39 @@
     <Compile Include="SokobanGame\utilities\CryptographyXml.cs" />
     <Compile Include="SokobanGame\utilities\LevelRenderer.cs" />
     <Compile Include="SokobanGame\controllers\SkinController.cs" />
-    <Compile Include="SokobanGame\controllers\IGameController.cs" />
-    <Compile Include="SokobanGame\managers\ISaveManager.cs" />
-    <Compile Include="SokobanGame\managers\LevelManager.cs" />
+    <Compile Include="SokobanGame\controllers\interfaces\IGameController.cs" />
+    <Compile Include="SokobanGame\controllers\interfaces\ISaveController.cs" />
+    <Compile Include="SokobanGame\controllers\LevelController.cs" />
     <Compile Include="SokobanGame\enums\ItemType.cs" />
     <Compile Include="SokobanGame\enums\MoveDirection.cs" />
     <Compile Include="SokobanGame\utilities\RegistrySettings.cs" />
-    <Compile Include="SokobanGame\managers\SaveManager.cs" />
+    <Compile Include="SokobanGame\controllers\SaveController.cs" />
     <Compile Include="SokobanGame\models\Level.cs" />
     <Compile Include="SokobanGame\models\LevelStatistics.cs" />
     <Compile Include="SokobanGame\models\MoveRecord.cs" />
-    <Compile Include="SokobanGame\views\formGame.cs">
+    <Compile Include="SokobanGame\views\FormGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SokobanGame\views\formGame.Designer.cs">
-      <DependentUpon>formGame.cs</DependentUpon>
+    <Compile Include="SokobanGame\views\FormGame.Designer.cs">
+      <DependentUpon>FormGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="SokobanGame\views\formMenu.cs">
+    <Compile Include="SokobanGame\views\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SokobanGame\views\formMenu.Designer.cs">
-      <DependentUpon>formMenu.cs</DependentUpon>
+    <Compile Include="SokobanGame\views\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="SokobanGame\views\formRecords.cs">
+    <Compile Include="SokobanGame\views\FormRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SokobanGame\views\formRecords.Designer.cs">
-      <DependentUpon>formRecords.cs</DependentUpon>
+    <Compile Include="SokobanGame\views\FormRecords.Designer.cs">
+      <DependentUpon>FormRecords.cs</DependentUpon>
     </Compile>
-    <Compile Include="SokobanGame\views\formSettings.cs">
+    <Compile Include="SokobanGame\views\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SokobanGame\views\formSettings.Designer.cs">
-      <DependentUpon>formSettings.cs</DependentUpon>
+    <Compile Include="SokobanGame\views\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="SokobanGame\models\LevelItem.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -120,28 +122,28 @@
     <Compile Include="SokobanGame\controllers\SoundController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SokobanGame\views\formRules.cs">
+    <Compile Include="SokobanGame\views\FormRules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SokobanGame\views\formRules.Designer.cs">
-      <DependentUpon>formRules.cs</DependentUpon>
+    <Compile Include="SokobanGame\views\FormRules.Designer.cs">
+      <DependentUpon>FormRules.cs</DependentUpon>
     </Compile>
     <Compile Include="SokobanGame\сonstants\FilePathsConstants.cs" />
     <Compile Include="SokobanGame\сonstants\RegistryConstants.cs" />
-    <EmbeddedResource Include="SokobanGame\views\formGame.resx">
-      <DependentUpon>formGame.cs</DependentUpon>
+    <EmbeddedResource Include="SokobanGame\views\FormGame.resx">
+      <DependentUpon>FormGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SokobanGame\views\formMenu.resx">
-      <DependentUpon>formMenu.cs</DependentUpon>
+    <EmbeddedResource Include="SokobanGame\views\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SokobanGame\views\formRecords.resx">
-      <DependentUpon>formRecords.cs</DependentUpon>
+    <EmbeddedResource Include="SokobanGame\views\FormRecords.resx">
+      <DependentUpon>FormRecords.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SokobanGame\views\formRules.resx">
-      <DependentUpon>formRules.cs</DependentUpon>
+    <EmbeddedResource Include="SokobanGame\views\FormRules.resx">
+      <DependentUpon>FormRules.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SokobanGame\views\formSettings.resx">
-      <DependentUpon>formSettings.cs</DependentUpon>
+    <EmbeddedResource Include="SokobanGame\views\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,7 +151,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

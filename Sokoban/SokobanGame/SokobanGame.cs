@@ -6,13 +6,13 @@ namespace Sokoban
     public class SokobanGame : ISokobanGame, ISokobanRecords
     {
         // Приватные поля для различных контроллеров и настроек
-        private GameController gameController;
-        private LevelManager levelManager;
+        private IGameController gameController;
+        private LevelController levelController;
         private LevelRenderer levelRenderer;
         private LevelStatistics levelStatistics;
-        private SaveManager saveManager;
-        private SoundController soundController;
-        private SkinController skinController;
+        private ISaveController saveController;
+        private ISoundController soundController;
+        private ISkinController skinController;
         private readonly RegistrySettings registrySettings = new RegistrySettings();
         private ItemType[,] levelMap;
 
@@ -38,18 +38,18 @@ namespace Sokoban
         public SokobanGame(string playerName)
         {
             currentLevel = 0;
-            levelManager = new LevelManager();
-            levelManager.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
-            saveManager = new SaveManager(FilePathsConstants.SAVE_FILES_DIRECTORY, playerName + ".save");
-            saveManager.NewGame();
+            levelController = new LevelController();
+            levelController.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
+            saveController = new SaveController(FilePathsConstants.SAVE_FILES_DIRECTORY, playerName + ".save");
+            saveController.NewGame();
             Initialize(playerName);
         }
 
         // Конструктор для загрузки сохраненной игры
         public SokobanGame(string saveFilePath, string playerName)
         {
-            // Создать SaveManager с указанным путем к файлу сохранения
-            saveManager = new SaveManager(saveFilePath);       
+            // Создать SaveController с указанным путем к файлу сохранения
+            saveController = new SaveController(saveFilePath);       
             // Загрузить текущий уровень из сохраненной игры
             currentLevel = GetCompletedLevelsCount();
             // Инициализировать игру с указанным именем игрока
@@ -74,10 +74,10 @@ namespace Sokoban
 
             // Создать SkinController для обработки логики скина игры
             skinController = new SkinController();
-            // Создать LevelManager для управления уровнями игры
-            levelManager = new LevelManager();
+            // Создать LevelController для управления уровнями игры
+            levelController = new LevelController();
             // Загрузить уровни игры из указанной директории
-            levelManager.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
+            levelController.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
 
             InitializeGame();
         }
@@ -89,22 +89,22 @@ namespace Sokoban
             isLevelFinished = false;
 
             // Проверить, загружены ли какие-либо уровни
-            if (levelManager.LevelsCount > 0)
+            if (levelController.LevelsCount > 0)
             {
                 // Создать LevelRenderer для отображения игрового уровня
                 levelRenderer = new LevelRenderer(skinController, blockSize);
                 // Получить карту уровня для текущего уровня
-                levelMap = levelManager[currentLevel].LevelMap;
+                levelMap = levelController[currentLevel].LevelMap;
                 // Создать LevelStatistics для отслеживания статистики игры
                 levelStatistics = new LevelStatistics();
                 // Создать SoundController с указанными настройками звука
                 soundController = new SoundController(registrySettings.SoundIsEnabled);
                 // Создать GameController для управления игровым процессом
-                gameController = new GameController(levelManager[currentLevel], levelStatistics);
+                gameController = new GameController(levelController[currentLevel], levelStatistics);
 
                 // Установить свойства для отображения информации об уровне
-                LevelsCount = levelManager.LevelsCount;
-                LevelSize = new Size(levelManager[currentLevel].Width * blockSize, levelManager[currentLevel].Height * blockSize);
+                LevelsCount = levelController.LevelsCount;
+                LevelSize = new Size(levelController[currentLevel].Width * blockSize, levelController[currentLevel].Height * blockSize);
                 LevelImage = levelRenderer.RenderLevel(levelMap, registrySettings.SkinId);
                 MovesCount = levelStatistics.MovesCount;
                 PushesCount = levelStatistics.PushesCount;
@@ -118,17 +118,17 @@ namespace Sokoban
         public void StartNewGame()
         {
             currentLevel = 0;
-            levelManager = new LevelManager();
-            levelManager.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
-            saveManager = new SaveManager(FilePathsConstants.SAVE_FILES_DIRECTORY, PlayerName + ".save");
-            saveManager.NewGame();
+            levelController = new LevelController();
+            levelController.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
+            saveController = new SaveController(FilePathsConstants.SAVE_FILES_DIRECTORY, PlayerName + ".save");
+            saveController.NewGame();
             InitializeGame();
         }
 
         public void RestartLevel()
         {
-            levelManager = new LevelManager();
-            levelManager.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
+            levelController = new LevelController();
+            levelController.LoadLevels(FilePathsConstants.LEVEL_FILES_DIRECTORY);
             InitializeGame();
         }
 
@@ -190,18 +190,18 @@ namespace Sokoban
 
         public int GetCompletedLevelsCount()
         {
-            return saveManager.GetCompletedLevelsCount();
+            return saveController.GetCompletedLevelsCount();
         }
 
         public int GetCompletedLevelsCount(string pathFile)
         {
-            saveManager = new SaveManager(pathFile);
-            return saveManager.GetCompletedLevelsCount();
+            saveController = new SaveController(pathFile);
+            return saveController.GetCompletedLevelsCount();
         }
 
         public void SaveGame()
         {
-            saveManager.SaveGame(CurrentLevel.ToString(), MovesCount.ToString(), PushesCount.ToString());
+            saveController.SaveGame(CurrentLevel.ToString(), MovesCount.ToString(), PushesCount.ToString());
         }
     }
 }

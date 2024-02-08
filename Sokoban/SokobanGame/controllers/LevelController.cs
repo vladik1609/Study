@@ -4,7 +4,7 @@ using System.IO;
 namespace Sokoban
 {
     // Класс для управления уровнями
-    internal class LevelManager
+    internal class LevelController
     {
         private ArrayList levels = new ArrayList();
 
